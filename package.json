@@ -1,0 +1,24 @@
+{
+  "name": "CypressWithTypeScript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "rimraf ./cypress/results/json/*.json",
+    "test": "cypress run",
+    "posttest": "generate-mochawesome-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^6.5.0",
+    "cypress-downloadfile": "^1.2.0",
+    "typescript": "^4.2.2"
+  },
+  "devDependencies": {
+    "cypress-file-upload": "^5.0.2",
+    "cypress-mochawesome-reporter": "^1.3.0",
+    "rimraf": "^3.0.2"
+  }
+}

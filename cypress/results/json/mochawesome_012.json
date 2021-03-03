@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-01T12:14:15.674Z",
+    "end": "2021-03-01T12:14:25.399Z",
+    "duration": 9725,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d324db3e-5a30-4a70-adc6-f819852c6463",
+      "title": "",
+      "fullFile": "cypress\\integration\\login.ts",
+      "file": "cypress\\integration\\login.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "97a2c780-d760-432c-8677-78cd15f688d1",
+          "title": "all login tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login with valid credentials",
+              "fullTitle": "all login tests login with valid credentials",
+              "timedOut": null,
+              "duration": 843,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.enterUsername('test');\nloginPage.enterPassword('test');\nloginPage.clickLogin();\ncy.contains('Login Successful');\ncy.contains('here').click();",
+              "err": {},
+              "uuid": "d25f05c1-cedc-4cd6-8f73-2cf1e7b86316",
+              "parentUUID": "97a2c780-d760-432c-8677-78cd15f688d1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "login with invalid username",
+              "fullTitle": "all login tests login with invalid username",
+              "timedOut": null,
+              "duration": 707,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.enterUsername('test123');\nloginPage.enterPassword('test');\nloginPage.clickLogin();\ncy.on('window:alert', function (txt) {\n    expect(txt).to.be.equal('Wrong Credentials! Try again!');\n});",
+              "err": {},
+              "uuid": "f4d59a99-fec4-4668-8d17-e4b40db6a693",
+              "parentUUID": "97a2c780-d760-432c-8677-78cd15f688d1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "login with invalid password",
+              "fullTitle": "all login tests login with invalid password",
+              "timedOut": null,
+              "duration": 633,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.enterUsername('test');\nloginPage.enterPassword('test321');\nloginPage.clickLogin();\ncy.on('window:alert', function (txt) {\n    expect(txt).to.be.equal('Wrong Credentials! Try again!');\n});",
+              "err": {},
+              "uuid": "dfcc9219-e5c9-4abd-951e-f6db44b12d57",
+              "parentUUID": "97a2c780-d760-432c-8677-78cd15f688d1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d25f05c1-cedc-4cd6-8f73-2cf1e7b86316",
+            "f4d59a99-fec4-4668-8d17-e4b40db6a693",
+            "dfcc9219-e5c9-4abd-951e-f6db44b12d57"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2183,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results/json",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

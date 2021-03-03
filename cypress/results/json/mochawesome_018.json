@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-03-01T12:16:54.818Z",
+    "end": "2021-03-01T12:16:55.850Z",
+    "duration": 1032,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c0bd2425-baa8-4c80-bba9-c785e19b2f39",
+      "title": "",
+      "fullFile": "cypress\\integration\\fileupload.spec.ts",
+      "file": "cypress\\integration\\fileupload.spec.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1d5a490e-6311-44b0-9752-a695e1c0496a",
+          "title": "file upload tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "file upload demo",
+              "fullTitle": "file upload tests file upload demo",
+              "timedOut": null,
+              "duration": 961,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"Failed screenshot\",\n  \"value\": \"screenshots\\\\fileupload.spec.ts\\\\file upload tests -- file upload demo (failed).png\"\n}",
+              "code": "cy.visit('https://filebin.net/');\ncy.get('[id=\"fileField\"]').attachFile('photo.png');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://filebin.net/\n\nThe response we received from your web server was:\n\n  > 503: Service Unavailable\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://filebin.net/\n\nThe response we received from your web server was:\n\n  > 503: Service Unavailable\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at http://localhost:49216/__cypress/runner/cypress_runner.js:159060:25\n    at visitFailedByErr (http://localhost:49216/__cypress/runner/cypress_runner.js:158436:12)\n    at http://localhost:49216/__cypress/runner/cypress_runner.js:159040:13\n    at tryCatcher (http://localhost:49216/__cypress/runner/cypress_runner.js:10765:23)\n    at Promise._settlePromiseFromHandler (http://localhost:49216/__cypress/runner/cypress_runner.js:8700:31)\n    at Promise._settlePromise (http://localhost:49216/__cypress/runner/cypress_runner.js:8757:18)\n    at Promise._settlePromise0 (http://localhost:49216/__cypress/runner/cypress_runner.js:8802:10)\n    at Promise._settlePromises (http://localhost:49216/__cypress/runner/cypress_runner.js:8878:18)\n    at _drainQueueStep (http://localhost:49216/__cypress/runner/cypress_runner.js:5472:12)\n    at _drainQueue (http://localhost:49216/__cypress/runner/cypress_runner.js:5465:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:49216/__cypress/runner/cypress_runner.js:5481:5)\n    at Async.drainQueues (http://localhost:49216/__cypress/runner/cypress_runner.js:5351:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:49216/__cypress/tests?p=cypress\\integration\\fileupload.spec.ts:100:12)",
+                "diff": null
+              },
+              "uuid": "1653f34d-26dc-4287-9c93-49341b8299ce",
+              "parentUUID": "1d5a490e-6311-44b0-9752-a695e1c0496a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "1653f34d-26dc-4287-9c93-49341b8299ce"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 961,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results/json",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

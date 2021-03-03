@@ -1,0 +1,5 @@
+{
+    "reporter": "cypress-mochawesome-reporter",
+    "projectId": "679nwe",
+    "experimentalStudio": true
+}
